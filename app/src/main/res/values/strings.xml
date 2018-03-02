@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">DashProvedor</string>
+    <string name="cadastro_de_clientes">Cadastro de Clientes</string>
+    <string name="check_your_bank_activities">Check your bank activities</string>
+    <string name="botao1">botao1</string>
+</resources>
