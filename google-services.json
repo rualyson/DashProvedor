@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "594083856213",
+    "firebase_url": "https://dashprovedor.firebaseio.com",
+    "project_id": "dashprovedor",
+    "storage_bucket": "dashprovedor.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:594083856213:android:32eb76d56014cf50",
+        "android_client_info": {
+          "package_name": "rualyson.com.dashprovedor"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "594083856213-s64n3igc727k0vknerg8nqonvd6cchn2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA6x2D77gQJLP24gpyLriZZYwDVHEQH6I8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
