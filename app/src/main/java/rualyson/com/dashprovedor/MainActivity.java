@@ -1,9 +1,7 @@
 package rualyson.com.dashprovedor;
 
-import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
@@ -23,12 +21,14 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
+
     public void login(View view){
 
         setContentView(R.layout.activity_main);
     }
     public void cadastracliente(View view) {
-       setContentView(R.layout.cadastro);
+       setContentView(R.layout.cadastrocliente);
+
     }
     public void localizacao(View view){
         setContentView(R.layout.localizacao);
