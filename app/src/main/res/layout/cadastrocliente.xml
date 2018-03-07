@@ -133,8 +133,31 @@
                 android:background="@android:drawable/btn_dropdown"
                 android:autofillHints="Plano"
                 android:spinnerMode="dropdown"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_margin="10dp">
 
+            <Button
+                android:id="@+id/btConfirmar"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="Confirmar"
+                android:onClick="clickConfirmar"/>
+            <Button
+                android:id="@+id/btCancelar"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="Cancelar"
+                android:onClick="clickCancelar"/>
+
+            </LinearLayout>
         </LinearLayout>
+
+
     </ScrollView>
 
 </android.support.constraint.ConstraintLayout>
