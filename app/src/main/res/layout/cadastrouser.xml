@@ -1,79 +1,86 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center">
+    tools:context="rualyson.com.dashprovedor.MainActivity">
 
-    <EditText
-        android:id="@+id/edNome"
-        android:layout_width="330dp"
-        android:layout_height="wrap_content"
-        android:singleLine="true"
-        android:inputType="textPersonName"
-        android:layout_marginTop="5dp"
-        android:hint="Nome"
-        />
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
 
-    <EditText
-        android:id="@+id/edCPF"
-        android:layout_width="330dp"
-        android:layout_height="wrap_content"
-        android:singleLine="true"
-        android:inputType="number"
-        android:layout_marginTop="5dp"
-        android:hint="CPF"
-        />
-
-    <EditText
-        android:id="@+id/edEmail"
-        android:layout_width="330dp"
-        android:layout_height="wrap_content"
-        android:singleLine="true"
-        android:inputType="textEmailAddress"
-        android:layout_marginTop="5dp"
-        android:hint="Email"
-        />
-    <EditText
-        android:id="@+id/edUsuario"
-        android:layout_width="330dp"
-        android:layout_height="wrap_content"
-        android:singleLine="true"
-        android:inputType="text"
-        android:layout_marginTop="5dp"
-        android:hint="Usuario"
-        />
-
-    <EditText
-        android:layout_width="330dp"
-        android:layout_height="wrap_content"
-        android:singleLine="true"
-        android:inputType="textPassword"
-        android:hint="Senha"
-        />
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center"
-        android:layout_marginTop="35dp">
-
-        <Button
-            android:id="@+id/btCancelar"
-            android:layout_width="150dp"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Cancelar"
-            android:onClick="clickCancelar"
-            />
+            android:gravity="center"
+            android:orientation="vertical">
 
-        <Button
-            android:id="@+id/btConfirmar"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:text="Confirmar"
-            android:onClick="clickConfirmar"
-            />
+            <EditText
+                android:id="@+id/edNome"
+                android:layout_width="330dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:hint="Nome"
+                android:inputType="textPersonName"
+                android:singleLine="true" />
 
-    </LinearLayout>
+            <EditText
+                android:id="@+id/edCPF"
+                android:layout_width="330dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:hint="CPF"
+                android:inputType="number"
+                android:singleLine="true" />
 
-</LinearLayout>
+            <EditText
+                android:id="@+id/edEmail"
+                android:layout_width="330dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:hint="Email"
+                android:inputType="textEmailAddress"
+                android:singleLine="true" />
+
+            <EditText
+                android:id="@+id/edUsuario"
+                android:layout_width="330dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:hint="Usuario"
+                android:inputType="text"
+                android:singleLine="true" />
+
+            <EditText
+                android:layout_width="330dp"
+                android:layout_height="wrap_content"
+                android:hint="Senha"
+                android:inputType="textPassword"
+                android:singleLine="true" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btConfirmar"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="Confirmar" />
+
+                <Button
+                    android:id="@+id/btCancelar"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="Cancelar" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>

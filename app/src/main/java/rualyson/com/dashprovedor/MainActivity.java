@@ -1,5 +1,6 @@
 package rualyson.com.dashprovedor;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -24,10 +25,19 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    public void login(View view){
 
+    public void login(View view){
         setContentView(R.layout.activity_main);
     }
+
+    public void cadastro (View view){
+        setContentView(R.layout.escadastro);
+    }
+
+    public void cadastrausuario(View view){
+        setContentView(R.layout.cadastrouser);
+    }
+
     public void cadastracliente(View view) {
        setContentView(R.layout.cadastrocliente);
 
@@ -53,4 +63,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.ocorrencias);
     }
 
+    public void clickConfirmar(View view) {
+    }
 }

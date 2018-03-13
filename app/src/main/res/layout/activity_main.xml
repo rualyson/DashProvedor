@@ -30,7 +30,7 @@
                 android:layout_height="match_parent"
                 android:gravity="center"
                 android:orientation="vertical"
-                android:onClick="cadastracliente">
+                android:onClick="cadastro">
 
                 <ImageView
                     android:layout_width="64dp"
