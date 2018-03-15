@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="cadastrocliente" type="id" />
+    <item name="cadastrouser" type="id" />
+    <item name="escadastro" type="id" />
+    <item name="localizacao" type="id" />
+    <item name="loginuser" type="id" />
+    <item name="ocorrencias" type="id" />
+    <item name="statuscadastro" type="id" />
+</resources>

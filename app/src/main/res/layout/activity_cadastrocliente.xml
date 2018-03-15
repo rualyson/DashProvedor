@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="cadastrodecliente.carol.com.cadastrodecliente.MainActivity">
+    tools:context="rualyson.com.dashprovedor.Cadastrocliente">
 
     <ScrollView
         android:layout_width="fill_parent"
@@ -133,26 +133,24 @@
                 android:background="@android:drawable/btn_dropdown"
                 android:autofillHints="Plano"
                 android:spinnerMode="dropdown"/>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center"
-            android:layout_marginTop="10dp"
-            android:layout_margin="10dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_margin="10dp">
 
-            <Button
-                android:id="@+id/btConfirmar"
-                android:layout_width="150dp"
-                android:layout_height="wrap_content"
-                android:text="Confirmar"
-                android:onClick="clickConfirmar"/>
-            <Button
-                android:id="@+id/btCancelar"
-                android:layout_width="150dp"
-                android:layout_height="wrap_content"
-                android:text="Cancelar"
-                android:onClick="clickCancelar"/>
+                <Button
+                    android:id="@+id/btConfirmar"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="Confirmar"/>
+                <Button
+                    android:id="@+id/btCancelar"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="Cancelar" />
 
             </LinearLayout>
         </LinearLayout>

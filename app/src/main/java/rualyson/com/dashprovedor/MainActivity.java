@@ -1,68 +1,48 @@
 package rualyson.com.dashprovedor;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.CardView;
 import android.view.View;
-import android.widget.Button;
-import android.widget.ArrayAdapter;
-import android.widget.Spinner;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener{
+
+    private CardView cadastro, localizacao, ocorrencias, statuscadastro, vendasmes, recados;
+
+    protected void onCreate(Bundle savedInstanceState){
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        cadastro = (CardView) findViewById(R.id.cadastro_);
+        localizacao = (CardView) findViewById(R.id.localizacao_);
+        ocorrencias = (CardView) findViewById(R.id.ocorrencias_);
+        statuscadastro = (CardView) findViewById(R.id.statuscadastro_);
+        vendasmes = (CardView) findViewById(R.id.vendasmes_) ;
+        recados = (CardView) findViewById(R.id.recados_);
+
+
+        cadastro.setOnClickListener(this);
+        localizacao.setOnClickListener(this);
+        ocorrencias.setOnClickListener(this);
+        statuscadastro.setOnClickListener(this);
+        vendasmes.setOnClickListener(this);
+        recados.setOnClickListener(this);
+    }
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.login);
+    public void onClick(View v) {
+        Intent i;
 
+        switch (v.getId()){
+            case R.id.cadastro_ : i = new Intent(this,Cadastro.class);startActivity(i); break;
+            case R.id.localizacao_ : i = new Intent(this,Localizacao.class);startActivity(i); break;
+            case R.id.ocorrencias_ : i = new Intent(this, Ocorrencias.class);startActivity(i); break;
+            case R.id.statuscadastro_ : i = new Intent(this, statuscadastro.class);startActivity(i); break;
+            case R.id.vendasmes_ : i = new Intent(this, vendasmes.class);startActivity(i); break;
+            case R.id.recados_ : i = new Intent(this, recados.class);startActivity(i); break;
+            default:break;
 
-        Button botao1 = (Button) findViewById(R.id.botao1);
-        botao1.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View view) {
-                setContentView(R.layout.activity_main);
-
-            }
-        });
-    }
-
-
-    public void login(View view){
-        setContentView(R.layout.activity_main);
-    }
-
-    public void cadastro (View view){
-        setContentView(R.layout.escadastro);
-    }
-
-    public void cadastrausuario(View view){
-        setContentView(R.layout.cadastrouser);
-    }
-
-    public void cadastracliente(View view) {
-       setContentView(R.layout.cadastrocliente);
-
-        Spinner dropdown = findViewById(R.id.edRoteador);
-        String [] itens = new String [] {"Selecione","Comodato","Próprio"};
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, itens);
-        dropdown.setAdapter(adapter);
-
-        Spinner dropdwn = findViewById(R.id.edPlano);
-        String [] item = new String [] {"Selecione","6MB","10MB","15MB","20MB","30MB","50MB"};
-        ArrayAdapter<String> adapter1 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, item);
-        dropdwn.setAdapter(adapter1);
-
-    }
-    public void localizacao(View view){
-        setContentView(R.layout.localizacao);
-    }
-
-    public void statuscadastro(View view){
-        setContentView(R.layout.statuscadastro);
-    }
-    public void ocorrencias(View view){
-        setContentView(R.layout.ocorrencias);
-    }
-
-    public void clickConfirmar(View view) {
+        }
     }
 }
