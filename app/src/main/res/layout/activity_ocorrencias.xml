@@ -27,18 +27,18 @@
                 android:text="Ocorrências em aberto"></TextView>
 
             <Button
-                android:id="@+id/btnOk"
+                android:id="@+id/btncadastrar"
                 android:layout_width="111dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:text="Cadastrar"></Button>
 
             <Button
-                android:id="@+id/btnCancel"
-                android:layout_width="100dp"
+                android:id="@+id/btnstatus"
+                android:layout_width="110dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:text="Cancelar"></Button>
+                android:text="Visualizar"></Button>
         </LinearLayout>
     </LinearLayout>
 

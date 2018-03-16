@@ -24,7 +24,9 @@
         <activity android:name=".recados" />
         <activity android:name=".Cadastrocliente" />
         <activity android:name=".Cadastrouser" />
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".MainActivity" />
+        <activity android:name=".CadOcorrencia" />
+        <activity android:name=".VizOcorrencia"></activity>
     </application>
 
 </manifest>

@@ -3,4 +3,10 @@
     <string name="cadastro_de_clientes">Cadastro de Clientes</string>
     <string name="check_your_bank_activities">Check your bank activities</string>
     <string name="botao1">botao1</string>
+    <string name="contrato">Contrato</string>
+    <string name="tipo_de_ocorrencia">Tipo de ocorrência</string>
+    <string name="usuario_responsavel">Usuário responsável</string>
+    <string name="status_da_ocorrencia">Status da ocorrência</string>
+    <string name="conteudo">Conteúdo</string>
+    <string name="cadastrar">Cadastrar</string>
 </resources>
