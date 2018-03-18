@@ -52,6 +52,7 @@
                 android:singleLine="true" />
 
             <EditText
+                android:id="@+id/edPass"
                 android:layout_width="330dp"
                 android:layout_height="wrap_content"
                 android:hint="Senha"
@@ -80,5 +81,7 @@
 
             </LinearLayout>
         </LinearLayout>
+
+
     </ScrollView>
 </android.support.constraint.ConstraintLayout>

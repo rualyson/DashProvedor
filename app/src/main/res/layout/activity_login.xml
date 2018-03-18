@@ -21,10 +21,10 @@
             app:srcCompat="@drawable/web_hi_res_512" />
 
         <EditText
-            android:id="@+id/editText"
+            android:id="@+id/user"
             android:layout_width="250dp"
             android:layout_height="40dp"
-            android:layout_above="@+id/editText2"
+            android:layout_above="@+id/pass"
             android:layout_centerHorizontal="true"
             android:layout_marginBottom="21dp"
             android:background="#11000000"
@@ -35,11 +35,11 @@
             android:textSize="16dp" />
 
         <EditText
-            android:id="@+id/editText2"
+            android:id="@+id/pass"
             android:layout_width="250dp"
             android:layout_height="40dp"
-            android:layout_above="@+id/botao1"
-            android:layout_alignStart="@+id/editText"
+            android:layout_above="@+id/logar"
+            android:layout_alignStart="@+id/user"
             android:layout_marginBottom="49dp"
             android:background="#11000000"
             android:drawableLeft="@drawable/ic_lock_black_24dp"
@@ -56,13 +56,14 @@
             android:layout_centerHorizontal="true"
             android:layout_marginBottom="6dp" />
         <Button
+            android:id="@+id/logar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_above="@+id/textView2"
             android:layout_centerHorizontal="true"
             android:layout_marginBottom="46dp"
             android:text="Entrar"
-            android:id="@+id/botao1">
+            >
         </Button>
         <LinearLayout
             android:layout_width="wrap_content"
