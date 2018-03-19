@@ -5,5 +5,40 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="rualyson.com.dashprovedor.recados">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <EditText
+            android:id="@+id/anotacaoUuser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Insira seu recado aqui:"
+            android:inputType="textMultiLine" />
+
+        <ListView
+            android:id="@+id/listView"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/anotacaoUuser"
+            android:layout_marginTop="39dp" />
+
+        <Button
+            android:id="@+id/btn_adicionar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/listView"
+            android:layout_marginLeft="11dp"
+            android:layout_marginStart="11dp"
+            android:layout_marginTop="26dp"
+
+            android:text="Adicionar" />
+
+    </RelativeLayout>
 
 </android.support.constraint.ConstraintLayout>

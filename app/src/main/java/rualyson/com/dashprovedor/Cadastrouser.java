@@ -3,8 +3,10 @@ package rualyson.com.dashprovedor;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 public class Cadastrouser extends AppCompatActivity {
@@ -17,6 +19,10 @@ public class Cadastrouser extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cadastrouser);
+        Spinner dropdwn = findViewById(R.id.cargo);
+        String[] item = new String[]{"Selecione", "Técnico","Financeiro","Atendimento","Gerente","Administrador","Vendedor"};
+        ArrayAdapter<String> adapter1 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, item);
+        dropdwn.setAdapter(adapter1);
 
         db = new DBProvedor(this);
 

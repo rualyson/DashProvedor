@@ -58,6 +58,13 @@
                 android:hint="Senha"
                 android:inputType="textPassword"
                 android:singleLine="true" />
+            <Spinner
+                android:id="@+id/cargo"
+                android:layout_width="330dp"
+                android:layout_height="wrap_content"
+                android:background="@android:drawable/btn_dropdown"
+                android:autofillHints="Cargo"
+                android:spinnerMode="dropdown"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
