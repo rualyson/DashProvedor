@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="rualyson.com.dashprovedor.MainActivity"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:background="#fcfcfc"
+    android:gravity="center"
+    android:id="@+id/dashboard">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        app:srcCompat="@drawable/web_hi_res_512" />
+
+        <EditText
+            android:id="@+id/CPF_Func"
+            android:layout_width="250dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/imageView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="21dp"
+            android:layout_marginTop="50dp"
+            android:background="#11000000"
+            android:drawableLeft="@drawable/ic_person_black_24dp"
+            android:ems="10"
+            android:hint="  CPF"
+            android:inputType="number"
+            android:textSize="16dp" />
+
+        <Button
+            android:id="@+id/edEntrar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/CPF_Func"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="46dp"
+            android:text="Entrar" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/entrar"
+            android:layout_below="@+id/entrar"
+            android:layout_marginTop="65dp"
+            android:text="Entrar em contato" />
+
+
+
+</LinearLayout>
