@@ -11,8 +11,10 @@ import android.widget.Toast;
 
 public class Cadastrocliente extends AppCompatActivity {
 
-    EditText cpf, nome;
+    EditText ed_cpf, ed_name;
     Button btConfirm, btCancel;
+
+    DBProvedor db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,20 +30,21 @@ public class Cadastrocliente extends AppCompatActivity {
         ArrayAdapter<String> adapter1 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, item);
         dropdwn.setAdapter(adapter1);
 
-        final DBProvedor dbProvedor = new DBProvedor(this);
-        cpf = (EditText)findViewById(R.id.edCpf);
+        db = new DBProvedor(this);
+        ed_name = (EditText)findViewById(R.id.edNomeCli);
+        ed_cpf = (EditText)findViewById(R.id.edCPFcliente);
 
-        btConfirm = (Button)findViewById(R.id.bt_Confirmar);
+        btConfirm = (Button)findViewById(R.id.btConfirmar);
         btConfirm.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String CPF = cpf.getText().toString();
+                String name = ed_name.getText().toString();
+                String CPF = ed_cpf.getText().toString();
 
                 if (CPF.equals("")) {
-                    Toast.makeText(Cadastrocliente.this, "CPF não inserido, tente novamente", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Cadastrocliente.this, "Nome ou CPF não inserido, tente novamente", Toast.LENGTH_SHORT).show();
                 } else {
-
-                    long res = dbProvedor.CriarCliente(CPF);
+                    long res = db.CriarCliente(name, CPF);
                     if (res > 0) {
                         Toast.makeText(Cadastrocliente.this, "Registrado", Toast.LENGTH_SHORT).show();
                     } else {

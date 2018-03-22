@@ -16,7 +16,7 @@
             android:gravity="center">
 
             <EditText
-                android:id="@+id/edNome"
+                android:id="@+id/edNomeCli"
                 android:layout_width="330dp"
                 android:layout_height="wrap_content"
                 android:singleLine="true"
@@ -26,7 +26,7 @@
                 />
 
             <EditText
-                android:id="@+id/edCPF"
+                android:id="@+id/edCPFcliente"
                 android:layout_width="330dp"
                 android:layout_height="wrap_content"
                 android:singleLine="true"

@@ -8,10 +8,11 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 
 public class DBProvedor extends SQLiteOpenHelper {
-    private static int versao = 1;
-    private static String nome = "Login_Registro_BaseDados.db";
+    private static int versao = 2;
+    private static String nome = "Database.db";
     private String username;
     private String password;
+    private String name;
     private String cpf;
 
     public DBProvedor(Context context) {
@@ -19,16 +20,15 @@ public class DBProvedor extends SQLiteOpenHelper {
     }
 
     public void onCreate(SQLiteDatabase db) {
-        String str = "CREATE TABLE Utilizador(username TEXT PRIMARY KEY, password TEXT);";
-        db.execSQL(str);
+        db.execSQL("CREATE TABLE Utilizador(username TEXT PRIMARY KEY, password TEXT)");
+        db.execSQL("CREATE TABLE Cliente(name TEXT, cpf INTEGER PRIMARY KEY )");
 
-        String str1 = "CREATE TABLE ClienteCPF(cpf TEXT PRIMARY KEY, nome TEXT);";
-        db.execSQL(str1);
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL("DROP TABLE IF EXISTS Utilizador");
+        db.execSQL("DROP TABLE IF EXISTS Cliente");
         onCreate(db);
     }
 
@@ -38,6 +38,15 @@ public class DBProvedor extends SQLiteOpenHelper {
         cv.put("username", username);
         cv.put("password", password);
         long result = db.insert("Utilizador", null, cv);
+        return result;
+    }
+
+    public long CriarCliente(String name, String cpf) {
+        SQLiteDatabase db = getReadableDatabase();
+        ContentValues cv = new ContentValues();
+        cv.put("name", name);
+        cv.put("cpf", cpf);
+        long result = db.insert("Cliente", null, cv);
         return result;
     }
 
@@ -54,22 +63,25 @@ public class DBProvedor extends SQLiteOpenHelper {
         return "ERRO";
     }
 
-    public long CriarCliente(String cpf){
-        SQLiteDatabase dbcliente = getReadableDatabase();
-        ContentValues contentValues = new ContentValues();
-        contentValues.put("CPF", cpf);
-        long result = dbcliente.insert("ClienteCPF", null, contentValues);
-        return result;
-    }
-
-    public String validaCPF (String cpf){
+    public String validaCliente(String name, String cpf) {
+        this.name = name;
         this.cpf = cpf;
-        SQLiteDatabase database = getReadableDatabase();
-        Cursor cs = database.rawQuery("SELECT * FROM ClienteCPF WHERE cpf = ?", new String [] {
-                cpf.toString()});
-        if (cs.getCount() > 0){
-            return "OK";
-        } return "ERRO";
+        SQLiteDatabase db = getReadableDatabase();
+        Cursor c = db.rawQuery("SELECT * FROM Cliente WHERE name = ? AND cpf = ?" , new String[]{
+                name.toString(), cpf.toString()});
+        if (c.getCount()>0) {
+            return "OK" ;
+        }
+        return "ERRO";
     }
-
+    public String validaCPF(String cpf) {
+        this.cpf = cpf;
+        SQLiteDatabase db = getReadableDatabase();
+        Cursor c = db.rawQuery("SELECT * FROM Cliente WHERE cpf = ?" , new String[]{
+                cpf.toString()});
+        if (c.getCount()>0) {
+            return "OK" ;
+        }
+        return "ERRO";
+    }
 }

@@ -9,4 +9,7 @@
     <string name="status_da_ocorrencia">Status da ocorrência</string>
     <string name="conteudo">Conteúdo</string>
     <string name="cadastrar">Cadastrar</string>
+    <string name="txtQuantVendasMes">QuantVendasMes</string>
+    <string name="txtNomeMes">nomeMes</string>
+    <string name="txtQuantVendasNoMes">QuantVendasNoMes</string>
 </resources>

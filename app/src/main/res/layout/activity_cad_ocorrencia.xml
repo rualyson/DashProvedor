@@ -72,7 +72,7 @@
             android:spinnerMode="dropdown"/>
 
         <EditText
-            android:id="@+id/edCidade"
+            android:id="@+id/edconteudo"
             android:layout_width="330dp"
             android:layout_height="wrap_content"
             android:singleLine="true"
@@ -91,13 +91,13 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/btConfirmar"
+                android:id="@+id/btConfirmarOc"
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:text="@string/cadastrar" />
 
             <Button
-                android:id="@+id/btCancelar"
+                android:id="@+id/btCancelarOc"
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:text="Cancelar" />

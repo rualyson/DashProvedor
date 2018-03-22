@@ -5,5 +5,22 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="rualyson.com.dashprovedor.vendasmes">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
+        <Button
+            android:id="@+id/ButtonPesquisarPorVendedor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Vendedor" />
+
+        <Button
+            android:id="@+id/ButtonPesquisarPorMes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Mês" />
+    </LinearLayout>
 </android.support.constraint.ConstraintLayout>

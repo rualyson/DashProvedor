@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="rualyson.com.dashprovedor">
 
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!--<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />-->
     <application
         android:allowBackup="true"
         android:icon="@drawable/lm"
@@ -9,23 +11,30 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Login">
+        <meta-data android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version"/>
+
+        <activity android:name=".TelaInicial">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".Login"/>
+        <activity android:name=".LoginCliente" />
         <activity android:name=".Ocorrencias" />
         <activity android:name=".Localizacao" />
         <activity android:name=".Cadastro" />
         <activity android:name=".statuscadastro" />
-        <activity android:name=".vendasmes" />
         <activity android:name=".recados" />
         <activity android:name=".Cadastrocliente" />
         <activity android:name=".Cadastrouser" />
         <activity android:name=".MainActivity" />
         <activity android:name=".CadOcorrencia" />
+        <activity android:name=".vendasmes" />
+        <activity android:name=".ConsultaVendedor" />
+        <activity android:name=".ConsultaVendasMes" />
         <activity android:name=".VizOcorrencia"></activity>
     </application>
 
