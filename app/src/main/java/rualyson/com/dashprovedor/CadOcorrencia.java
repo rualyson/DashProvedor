@@ -52,9 +52,9 @@ public class CadOcorrencia extends AppCompatActivity {
                 if(conteu.equals("")){
                     Toast.makeText(CadOcorrencia.this, "Campo conteúdo obrigatório", Toast.LENGTH_SHORT).show();
                 }else{
-                        Toast.makeText(CadOcorrencia.this, "Ocorrência cadastrada", Toast.LENGTH_SHORT).show();
-                        Intent it = new Intent(CadOcorrencia.this, MainActivity.class);
-                        startActivity(it);
+                    Toast.makeText(CadOcorrencia.this, "Ocorrência cadastrada", Toast.LENGTH_SHORT).show();
+                    Intent it = new Intent(CadOcorrencia.this, MainActivity.class);
+                    startActivity(it);
 
                 }
             }

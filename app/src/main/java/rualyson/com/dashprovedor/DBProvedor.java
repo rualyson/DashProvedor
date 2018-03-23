@@ -6,6 +6,8 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
+import java.util.ArrayList;
+
 
 public class DBProvedor extends SQLiteOpenHelper {
     private static int versao = 2;
@@ -49,7 +51,6 @@ public class DBProvedor extends SQLiteOpenHelper {
         long result = db.insert("Cliente", null, cv);
         return result;
     }
-
 
     public String validaLoginUser(String username, String password) {
         this.username = username;

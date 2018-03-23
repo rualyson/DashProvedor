@@ -46,7 +46,7 @@ public class LoginCliente extends AppCompatActivity {
 
                     if (res.equals("OK")){
                         Toast.makeText(LoginCliente.this, "Logado", Toast.LENGTH_SHORT).show();
-                        Intent it = new Intent(LoginCliente.this, MainActivity.class);
+                        Intent it = new Intent(LoginCliente.this, DashCliente.class);
                         startActivity(it);
                     } else {
                         Toast.makeText(LoginCliente.this, "CPF incorreto, tente novamente", Toast.LENGTH_SHORT).show();

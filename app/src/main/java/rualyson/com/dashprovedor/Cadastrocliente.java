@@ -1,5 +1,6 @@
 package rualyson.com.dashprovedor;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -10,7 +11,6 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 public class Cadastrocliente extends AppCompatActivity {
-
     EditText ed_cpf, ed_name;
     Button btConfirm, btCancel;
 
@@ -18,6 +18,7 @@ public class Cadastrocliente extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cadastrocliente);
         Spinner dropdown = findViewById(R.id.edRoteador);
@@ -42,11 +43,15 @@ public class Cadastrocliente extends AppCompatActivity {
                 String CPF = ed_cpf.getText().toString();
 
                 if (CPF.equals("")) {
-                    Toast.makeText(Cadastrocliente.this, "Nome ou CPF não inserido, tente novamente", Toast.LENGTH_SHORT).show();
-                } else {
+                    Toast.makeText(Cadastrocliente.this, "CPF não inserido, tente novamente", Toast.LENGTH_SHORT).show();
+                }else if (name.equals("")) {
+                    Toast.makeText(Cadastrocliente.this, "Nome não inserido, tente novamente", Toast.LENGTH_SHORT).show();
+                }else {
                     long res = db.CriarCliente(name, CPF);
                     if (res > 0) {
-                        Toast.makeText(Cadastrocliente.this, "Registrado", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(Cadastrocliente.this, "Cadastro realizado com sucesso", Toast.LENGTH_SHORT).show();
+                        Intent it = new Intent(Cadastrocliente.this, MainActivity.class);
+                        startActivity(it);
                     } else {
                         Toast.makeText(Cadastrocliente.this, "Registro incorreto, tente novamente", Toast.LENGTH_SHORT).show();
                     }
