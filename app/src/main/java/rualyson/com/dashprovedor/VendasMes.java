@@ -13,8 +13,8 @@ public class vendasmes extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_vendasmes);
 
-        consultaVendedor = (Button) findViewById(R.id.ButtonPesquisarPorVendedor);
-        consultaPorMes = (Button) findViewById(R.id.ButtonPesquisarPorMes);
+        consultaVendedor = (Button) findViewById(R.id.btPesquisarVendedor);
+        consultaPorMes = (Button) findViewById(R.id.btPesquisarMes);
 
 
         consultaVendedor.setOnClickListener(new View.OnClickListener() {
@@ -22,11 +22,11 @@ public class vendasmes extends AppCompatActivity {
             public void onClick(View view){
                 Intent i;
                 switch (view.getId()) {
-                    case R.id.ButtonPesquisarPorVendedor:
+                    case R.id.btPesquisarVendedor:
                         i = new Intent(vendasmes.this, ConsultaVendedor.class);
                         startActivity(i);
                         break;
-                    case R.id.ButtonPesquisarPorMes:
+                    case R.id.btPesquisarMes:
                         i = new Intent(vendasmes.this, ConsultaVendasMes.class);
                         startActivity(i);
                         break;
@@ -42,11 +42,11 @@ public class vendasmes extends AppCompatActivity {
             public void onClick(View view){
                 Intent i;
                 switch (view.getId()) {
-                    case R.id.ButtonPesquisarPorVendedor:
+                    case R.id.btPesquisarVendedor:
                         i = new Intent(vendasmes.this, ConsultaVendedor.class);
                         startActivity(i);
                         break;
-                    case R.id.ButtonPesquisarPorMes:
+                    case R.id.btPesquisarMes:
                         i = new Intent(vendasmes.this, ConsultaVendasMes.class);
                         startActivity(i);
                         break;
