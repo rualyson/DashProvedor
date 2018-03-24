@@ -25,6 +25,7 @@ public class Login extends AppCompatActivity{
 
         entrar = (Button) findViewById(R.id.logar);
 
+
         entrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

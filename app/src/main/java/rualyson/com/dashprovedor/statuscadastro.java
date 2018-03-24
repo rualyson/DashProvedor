@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class statuscadastro extends AppCompatActivity {
     Cursor ponteiro;
@@ -28,6 +29,8 @@ public class statuscadastro extends AppCompatActivity {
             public void onClick(View v) {
                 resultado = (TextView) findViewById(R.id.txtResultado);
                 RadioGroup rgPesquisar = (RadioGroup) findViewById(R.id.rgPesquisar);
+
+                Toast.makeText(statuscadastro.this, "Cliente não encontrado , tente novamente", Toast.LENGTH_SHORT).show();
                 String strPesquisa = "";
 
                 switch (rgPesquisar.getCheckedRadioButtonId()) {
@@ -39,6 +42,8 @@ public class statuscadastro extends AppCompatActivity {
                         strPesquisa = "cpf LIKE ?";
                         break;
                 }
+
+
             }
         });
     }
