@@ -28,13 +28,13 @@
         <activity android:name=".Ocorrencias" />
         <activity android:name=".Localizacao" />
         <activity android:name=".Cadastro" />
-        <activity android:name=".statuscadastro" />
-        <activity android:name=".recados" />
+        <activity android:name=".StatusCadastro" />
+        <activity android:name=".Recados" />
         <activity android:name=".Cadastrocliente" />
         <activity android:name=".Cadastrouser" />
         <activity android:name=".MainActivity" />
         <activity android:name=".CadOcorrencia" />
-        <activity android:name=".vendasmes" />
+        <activity android:name=".VendasMes" />
         <activity android:name=".ConsultaVendedor" />
         <activity android:name=".ConsultaVendasMes" />
         <activity android:name=".VizOcorrencia" />

@@ -55,5 +55,13 @@ public class Cadastrouser extends AppCompatActivity {
                 }
             }
         });
+        bt_cancel = (Button)findViewById(R.id.btCancelar);
+        bt_cancel.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick (View view){
+                setContentView(R.layout.activity_main);
+            }
+        });
+
     }
     }

@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         cadastro = (CardView) findViewById(R.id.cadastro_);
         localizacao = (CardView) findViewById(R.id.localizacao_);
-        ocorrencias = (CardView) findViewById(R.id.ocorrencias_);
+        ocorrencias = (CardView) findViewById(R.id.edOcorrencias);
         statuscadastro = (CardView) findViewById(R.id.statuscadastro_);
         vendasmes = (CardView) findViewById(R.id.vendasmes_) ;
         recados = (CardView) findViewById(R.id.recados_);
@@ -37,10 +37,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         switch (v.getId()){
             case R.id.cadastro_ : i = new Intent(this,Cadastro.class);startActivity(i); break;
             case R.id.localizacao_ : i = new Intent(this,Localizacao.class);startActivity(i); break;
-            case R.id.ocorrencias_ : i = new Intent(this, Ocorrencias.class);startActivity(i); break;
-            case R.id.statuscadastro_ : i = new Intent(this, statuscadastro.class);startActivity(i); break;
-            case R.id.vendasmes_ : i = new Intent(this, vendasmes.class);startActivity(i); break;
-            case R.id.recados_ : i = new Intent(this, recados.class);startActivity(i); break;
+            case R.id.edOcorrencias: i = new Intent(this, Ocorrencias.class);startActivity(i); break;
+            case R.id.statuscadastro_ : i = new Intent(this, StatusCadastro.class);startActivity(i); break;
+            case R.id.vendasmes_ : i = new Intent(this, VendasMes.class);startActivity(i); break;
+            case R.id.recados_ : i = new Intent(this, Recados.class);startActivity(i); break;
             default:break;
 
         }

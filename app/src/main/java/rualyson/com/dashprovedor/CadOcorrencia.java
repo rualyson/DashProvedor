@@ -11,7 +11,8 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 public class CadOcorrencia extends AppCompatActivity {
-    Button btConf;
+
+    Button btConf, btCancel;
     EditText conteudo;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,25 +41,30 @@ public class CadOcorrencia extends AppCompatActivity {
 
         conteudo = (EditText)findViewById(R.id.edconteudo);
 
-
         btConf = (Button) findViewById(R.id.btConfirmarOc);
 
         btConf.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String conteu = conteudo.getText().toString();
-
-
                 if(conteu.equals("")){
                     Toast.makeText(CadOcorrencia.this, "Campo conteúdo obrigatório", Toast.LENGTH_SHORT).show();
                 }else{
                     Toast.makeText(CadOcorrencia.this, "Ocorrência cadastrada", Toast.LENGTH_SHORT).show();
                     Intent it = new Intent(CadOcorrencia.this, MainActivity.class);
                     startActivity(it);
-
                 }
             }
         });
+
+        btCancel = (Button) findViewById(R.id.btCancelarOc);
+        btCancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                setContentView(R.layout.activity_main);
+            }
+        });
     }
+
 
 }

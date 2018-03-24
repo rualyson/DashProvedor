@@ -11,10 +11,9 @@ import android.widget.ListView;
 import android.widget.ArrayAdapter;
 import android.widget.Toast;
 
-import java.util.List;
 import java.util.ArrayList;
 
-public class recados extends AppCompatActivity {
+public class Recados extends AppCompatActivity {
 
     private ListView anotacoes;
     private Button adicionar,remover;
@@ -33,14 +32,14 @@ public class recados extends AppCompatActivity {
         adicionar=(Button)findViewById(R.id.btn_adicionar);
         text_user=(EditText)findViewById(R.id.anotacaoUuser);
 
-        adapter = new ArrayAdapter<String>(recados.this,android.R.layout.simple_list_item_1,arrayAnotacoes);
+        adapter = new ArrayAdapter<String>(Recados.this,android.R.layout.simple_list_item_1,arrayAnotacoes);
 
         adicionar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
                 if(text_user.getText().toString().isEmpty()){
-                    Toast.makeText(recados.this,"Preencha algo",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Recados.this,"Preencha algo",Toast.LENGTH_SHORT).show();
                 }
                 else{
                     arrayAnotacoes.add(text_user.getText().toString());

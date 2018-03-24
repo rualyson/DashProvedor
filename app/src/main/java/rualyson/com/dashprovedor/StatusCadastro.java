@@ -12,7 +12,7 @@ import android.widget.EditText;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 
-public class statuscadastro extends AppCompatActivity {
+public class StatusCadastro extends AppCompatActivity {
     Cursor ponteiro;
     DBProvedor db;
     TextView resultado;

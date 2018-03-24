@@ -35,7 +35,7 @@ public class Cadastrocliente extends AppCompatActivity {
         ed_name = (EditText)findViewById(R.id.edNomeCli);
         ed_cpf = (EditText)findViewById(R.id.edCPFcliente);
 
-        btConfirm = (Button)findViewById(R.id.btConfirmar);
+        btConfirm = (Button)findViewById(R.id.btnConfirmar);
         btConfirm.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -57,6 +57,14 @@ public class Cadastrocliente extends AppCompatActivity {
                     }
                 }
             }
+        });
+        btCancel = (Button)findViewById(R.id.btnCancelar);
+        btCancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view){
+                setContentView(R.layout.activity_main);
+            }
+
         });
 
     }
