@@ -7,9 +7,6 @@ import android.support.v7.widget.CardView;
 import android.view.View;
 import android.widget.Button;
 
-/**
- * Created by @julianacnascimento on march/18.
- */
 
 public class TelaInicial extends AppCompatActivity {
 

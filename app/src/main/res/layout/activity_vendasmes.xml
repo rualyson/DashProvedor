@@ -1,26 +1,41 @@
-<?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="rualyson.com.dashprovedor.vendasmes">
+    tools:context="rualyson.com.dashprovedor.Cadastro">
     <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
 
-        <Button
-            android:id="@+id/ButtonPesquisarPorVendedor"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Vendedor" />
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="30dp"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/tvOut"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="70dp"
+                android:text="Escolha o tipo de relatorio que deseja"></TextView>
 
-        <Button
-            android:id="@+id/ButtonPesquisarPorMes"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Mês" />
+            <Button
+                android:id="@+id/ButtonPesquisarPorVendedor"
+                android:layout_width="111dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="Relatorio por vendedor" ></Button>
+
+            <Button
+                android:id="@+id/ButtonPesquisarPorMes"
+                android:layout_width="111dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="Relatorio por Mês" ></Button>
+        </LinearLayout>
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>
