@@ -11,7 +11,7 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 public class CadOcorrencia extends AppCompatActivity {
-    Button btConf;
+    Button btConf,btCancel;
     EditText conteudo;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,6 +57,15 @@ public class CadOcorrencia extends AppCompatActivity {
                     startActivity(it);
 
                 }
+            }
+        });
+
+        btCancel = (Button) findViewById(R.id.btCancelarOc);
+        btCancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent it = new Intent(CadOcorrencia.this, MainActivity.class);
+                startActivity(it);
             }
         });
     }

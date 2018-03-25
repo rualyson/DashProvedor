@@ -80,6 +80,15 @@ public class Cadastrocliente extends AppCompatActivity {
             }
         });
 
+        btCancel = (Button) findViewById(R.id.btCancelar);
+        btCancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent it = new Intent(Cadastrocliente.this, MainActivity.class);
+                startActivity(it);
+            }
+        });
+
     }
 }
 

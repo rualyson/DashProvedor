@@ -17,28 +17,29 @@ import java.util.ArrayList;
 public class recados extends AppCompatActivity {
 
     private ListView anotacoes;
-    private Button adicionar,remover;
+    private Button adicionar;
     private EditText text_user;
     private ArrayAdapter adapter;
     private ArrayList<String> arrayAnotacoes;
 
+
+    DBProvedor db;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recados);
 
         arrayAnotacoes = new ArrayList<String>();
-
         anotacoes=(ListView)findViewById(R.id.listView);
         adicionar=(Button)findViewById(R.id.btn_adicionar);
         text_user=(EditText)findViewById(R.id.anotacaoUuser);
 
         adapter = new ArrayAdapter<String>(recados.this,android.R.layout.simple_list_item_1,arrayAnotacoes);
 
+
         adicionar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 if(text_user.getText().toString().isEmpty()){
                     Toast.makeText(recados.this,"Preencha algo",Toast.LENGTH_SHORT).show();
                 }
@@ -58,6 +59,7 @@ public class recados extends AppCompatActivity {
                     });
                 }
             }
-        });
-    }
+
+    });
+}
 }

@@ -1,5 +1,6 @@
 package rualyson.com.dashprovedor;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -11,7 +12,7 @@ import android.widget.Toast;
 
 public class Cadastrouser extends AppCompatActivity {
     EditText ed_nome, ed_cpf, ed_email, ed_user, ed_senha;
-    Button bt_conf,  bt_cancel;
+    Button bt_conf,  btCancel;
 
     DBProvedor db;
 
@@ -53,6 +54,14 @@ public class Cadastrouser extends AppCompatActivity {
                         Toast.makeText(Cadastrouser.this, "Registro incorret, tente novamente", Toast.LENGTH_SHORT).show();
                     }
                 }
+            }
+        });
+        btCancel = (Button) findViewById(R.id.btCancelar);
+        btCancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent it = new Intent(Cadastrouser.this, MainActivity.class);
+                startActivity(it);
             }
         });
     }

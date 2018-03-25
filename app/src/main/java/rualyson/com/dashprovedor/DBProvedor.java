@@ -24,7 +24,7 @@ public class DBProvedor extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         db.execSQL("CREATE TABLE Utilizador(username TEXT PRIMARY KEY, password TEXT)");
         db.execSQL("CREATE TABLE Cliente(name TEXT, cpf INTEGER PRIMARY KEY )");
-
+        db.execSQL("CREATE TABLE Recados(anotacao TEXT)");
     }
 
     @Override
@@ -40,6 +40,14 @@ public class DBProvedor extends SQLiteOpenHelper {
         cv.put("username", username);
         cv.put("password", password);
         long result = db.insert("Utilizador", null, cv);
+        return result;
+    }
+
+    public long CriarRecado(String anotacao) {
+        SQLiteDatabase db = getReadableDatabase();
+        ContentValues cv = new ContentValues();
+        cv.put("anotacao", anotacao);
+        long result = db.insert("Recados", null, cv);
         return result;
     }
 
