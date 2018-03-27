@@ -53,6 +53,7 @@ public class Cadastrouser extends AppCompatActivity {
                     } else {
                         Toast.makeText(Cadastrouser.this, "Registro incorret, tente novamente", Toast.LENGTH_SHORT).show();
                     }
+
                 }
             }
         });

@@ -8,6 +8,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class Cadastrocliente extends AppCompatActivity {
@@ -16,10 +17,8 @@ public class Cadastrocliente extends AppCompatActivity {
 
     DBProvedor db;
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate() {
 
-        super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cadastrocliente);
         Spinner dropdown = findViewById(R.id.edRoteador);
         String[] itens = new String[]{"Selecione", "Próprio", "Comodato"};

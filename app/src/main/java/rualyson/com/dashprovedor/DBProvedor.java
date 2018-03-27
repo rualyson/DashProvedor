@@ -93,4 +93,12 @@ public class DBProvedor extends SQLiteOpenHelper {
         }
         return "ERRO";
     }
+    public int contador() {
+        SQLiteDatabase db = getWritableDatabase();
+        String sql = "SELECT * FROM Cliente";
+        int resultado = db.rawQuery(sql, null).getCount();
+        db.close();
+
+        return resultado;
+    }
 }
